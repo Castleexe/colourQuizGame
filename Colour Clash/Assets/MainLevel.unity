@@ -861,7 +861,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 329163636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1732633391}
+        m_TargetAssemblyTypeName: GamaManager, Assembly-CSharp
+        m_MethodName: UserSelectTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &329163636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1409,7 @@ GameObject:
   - component: {fileID: 1217785373}
   - component: {fileID: 1217785372}
   - component: {fileID: 1217785371}
+  - component: {fileID: 1217785376}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1501,6 +1514,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1217785376
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217785370}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 501fab3dcee1fc44081eba6abe87db5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1299359677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1766,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1393977510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1732633391}
+        m_TargetAssemblyTypeName: GamaManager, Assembly-CSharp
+        m_MethodName: UserSelectFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1393977510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,10 +2047,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions:
-  - sprite: {fileID: 0}
+  - sprite: {fileID: 21300000, guid: bc213860ec654ab4b9bddbb0d6e8fe4b, type: 3}
     isTrue: 1
-  - sprite: {fileID: 0}
-    isTrue: 0
+  - sprite: {fileID: 21300000, guid: ed9bacf11823eaa478c80614ef417db7, type: 3}
+    isTrue: 1
+  questionImage: {fileID: 27314926}
+  timeBetweenQuestions: 1
 --- !u!4 &1732633392
 Transform:
   m_ObjectHideFlags: 0

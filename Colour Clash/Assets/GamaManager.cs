@@ -14,6 +14,9 @@ public class GamaManager : MonoBehaviour
 
     [SerializeField] Image questionImage;
     [SerializeField] float timeBetweenQuestions = 1f;
+
+    [SerializeField] Text trueAnswerText;
+    [SerializeField] Text falseAnswerText;
     private void Start()
     {
         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
@@ -30,7 +33,16 @@ public class GamaManager : MonoBehaviour
 
         questionImage.sprite = currentQuestion.sprite;
 
-        
+        if (currentQuestion.isTrue)
+        {
+            trueAnswerText.text = "CORRECT";
+            falseAnswerText.text = "INCORRECT";
+        }
+        else
+        {
+            trueAnswerText.text = "INCORRECT";
+            falseAnswerText.text = "CORRECT";
+        }
     }
 
     IEnumerator TransitionToNextQuestion ()

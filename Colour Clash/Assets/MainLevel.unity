@@ -2215,6 +2215,7 @@ MonoBehaviour:
   timeBetweenQuestions: 1
   trueAnswerText: {fileID: 588450209}
   falseAnswerText: {fileID: 609574271}
+  animator: {fileID: 1217785376}
 --- !u!4 &1732633392
 Transform:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class GamaManager : MonoBehaviour
 
     [SerializeField] Text trueAnswerText;
     [SerializeField] Text falseAnswerText;
+
+    [SerializeField] Animator animator;
     private void Start()
     {
         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
@@ -55,6 +57,7 @@ public class GamaManager : MonoBehaviour
 
     public void UserSelectTrue()    
     {
+        animator.SetTrigger("True");
         if (currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
@@ -68,6 +71,7 @@ public class GamaManager : MonoBehaviour
 
     public void UserSelectFalse()
     {
+        animator.SetTrigger("False");
         if (!currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");

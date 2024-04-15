@@ -2211,6 +2211,10 @@ MonoBehaviour:
     isTrue: 1
   - sprite: {fileID: 21300000, guid: ed9bacf11823eaa478c80614ef417db7, type: 3}
     isTrue: 1
+  - sprite: {fileID: 21300000, guid: 0f3089da26423d244b60b2988d6fdecc, type: 3}
+    isTrue: 1
+  - sprite: {fileID: 21300000, guid: d70dcb69b24b2ae47ad88ba2d897d62e, type: 3}
+    isTrue: 0
   questionImage: {fileID: 27314926}
   timeBetweenQuestions: 1
   trueAnswerText: {fileID: 588450209}

@@ -19,6 +19,9 @@ public class GamaManager : MonoBehaviour
     [SerializeField] Text falseAnswerText;
 
     [SerializeField] Animator animator;
+
+    static int score = 0;
+    [SerializeField] Text scoreText;
     private void Start()
     {
         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
@@ -26,6 +29,7 @@ public class GamaManager : MonoBehaviour
             unansweredQuestions = questions.ToList<Question>();
         }
         SetCurrentQuestion();
+        scoreText.text = "Score: " + score.ToString();
     }
 
     void SetCurrentQuestion()
@@ -61,6 +65,8 @@ public class GamaManager : MonoBehaviour
         if (currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
+            score++;
+            scoreText.text = "Score: " + score.ToString();
         }
         else
         {

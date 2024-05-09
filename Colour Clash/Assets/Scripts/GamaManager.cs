@@ -20,16 +20,18 @@ public class GamaManager : MonoBehaviour
 
     [SerializeField] Animator animator;
 
-    static int score = 0;
-    [SerializeField] Text scoreText;
+    Score score;
+
+    
     private void Start()
     {
+        score = GetComponent<Score>();
         if (unansweredQuestions == null || unansweredQuestions.Count == 0)
         {
             unansweredQuestions = questions.ToList<Question>();
         }
         SetCurrentQuestion();
-        scoreText.text = "Score: " + score.ToString();
+        
     }
 
     void SetCurrentQuestion()
@@ -65,12 +67,12 @@ public class GamaManager : MonoBehaviour
         if (currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
-            score++;
-            scoreText.text = "Score: " + score.ToString();
+            score.addScore();
         }
         else
         {
             Debug.Log("WRONG! BOO HOO");
+            SceneManager.LoadScene("GameOver");
         }
         StartCoroutine(TransitionToNextQuestion());
     }
@@ -81,10 +83,12 @@ public class GamaManager : MonoBehaviour
         if (!currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
+            score.addScore();
         }
         else
         {
             Debug.Log("WRONG! BOO HOO");
+            SceneManager.LoadScene("GameOver");
         }
         StartCoroutine(TransitionToNextQuestion());
     }

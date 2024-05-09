@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour
 {
     Image timerBar;
@@ -27,6 +28,7 @@ public class TimerScript : MonoBehaviour
         {
             timesUpText.SetActive(true);
             Time.timeScale = 0;
+            SceneManager.LoadScene(1);
         }
     }
 }

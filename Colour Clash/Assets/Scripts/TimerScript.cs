@@ -8,11 +8,9 @@ public class TimerScript : MonoBehaviour
     Image timerBar;
     public float maxTime = 5f;
     float timeLeft;
-    public GameObject timesUpText;
     // Use this for initialization
     void Start()
     {
-        timesUpText.SetActive(false);
         timerBar = GetComponent<Image>();
         timeLeft = maxTime;
     }
@@ -26,9 +24,10 @@ public class TimerScript : MonoBehaviour
         }
         else
         {
-            timesUpText.SetActive(true);
             Time.timeScale = 0;
             SceneManager.LoadScene(1);
         }
     }
+    
+
 }

@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
+    Score score;
     // Start is called before the first frame update
     void Start()
     {
-        
+        score = GetComponent<Score>();
     }
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class Buttons : MonoBehaviour
 
     public void restart()
     {
+        score.resetScore();
         SceneManager.LoadScene("MainLevel");
     }
 

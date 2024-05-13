@@ -21,6 +21,7 @@ public class GamaManager : MonoBehaviour
     [SerializeField] Animator animator;
 
     Score score;
+    [SerializeField] TimerScript timerScript;
 
     
     private void Start()

@@ -23,6 +23,8 @@ public class GamaManager : MonoBehaviour
     Score score;
     [SerializeField] TimerScript timerScript;
 
+    bool scoreCooldown = false;
+
     
     private void Start()
     {
@@ -59,6 +61,7 @@ public class GamaManager : MonoBehaviour
         unansweredQuestions.Remove(currentQuestion);
         yield return new WaitForSeconds(timeBetweenQuestions);
         
+        scoreCooldown = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -68,7 +71,12 @@ public class GamaManager : MonoBehaviour
         if (currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
-            score.addScore();
+            if (!scoreCooldown)
+            {
+                score.addScore();
+                scoreCooldown = true;
+            }
+          
         }
         else
         {
@@ -84,7 +92,11 @@ public class GamaManager : MonoBehaviour
         if (!currentQuestion.isTrue)
         {
             Debug.Log("CORRECT!");
-            score.addScore();
+            if (!scoreCooldown)
+            {
+                score.addScore();
+                scoreCooldown = true;
+            }
         }
         else
         {

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour
 {
     Image timerBar;
-    public float maxTime = 5f;
+    float maxTime = 5f;
     float timeLeft;
     // Use this for initialization
     void Start()
@@ -24,8 +24,7 @@ public class TimerScript : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("GameOver");
         }
     }
     

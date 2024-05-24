@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TimerScript : MonoBehaviour
 {
     Image timerBar;
-    float maxTime = 5f;
+    float maxTime = 7f;
     float timeLeft;
     // Use this for initialization
     void Start()

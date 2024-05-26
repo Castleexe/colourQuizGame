@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Score : MonoBehaviour
 {
     static int score = 0;
-    static int highScore = 0;
     [SerializeField] Text scoreText;
     [SerializeField] Text highScoreText;
     // Start is called before the first frame update
@@ -24,7 +23,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void addScore()
@@ -40,11 +39,11 @@ public class Score : MonoBehaviour
 
     public void updateHighScore()
     {
-        if (score > highScore)
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
         {
-            highScore = score;
-            highScoreText.text = "High Score: " + highScore.ToString();
-
+            PlayerPrefs.SetInt("HighScore", score);
         }
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 }
+

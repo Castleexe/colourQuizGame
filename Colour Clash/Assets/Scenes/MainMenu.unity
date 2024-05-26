@@ -2026,7 +2026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &672010877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4966,10 +4966,11 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "The premise of the game is being able to deduce whether two colours are
     the same or different. \r\n\r\nThere are two buttons, the red button is \u201Cdifferent\u201D,
-    which you press when it\u2019s different, and the blue \u201Csame\u201D button,
-    which you press when it's the same. \r\n\r\nWhen you get a question wrong, then
-    you get no more chances, and your score will be given to you. \r\n\r\nThe goal
-    is to get the most points possible, and have fun! "
+    which you press when the two colours shown are different, and the blue \u201Csame\u201D
+    button, which you press when they're the same. \r\n\r\nWhen you get a question
+    wrong, then you get no more chances, and your score will be given to you. \r\n\r\nThe
+    goal is to get the most points possible, and have fun!  (In-game screenshots
+    below)"
 --- !u!222 &1675117147
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5015,7 +5016,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 60, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1725542983
 MonoBehaviour:
@@ -5060,7 +5061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.874}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.874}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5680,7 +5681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
